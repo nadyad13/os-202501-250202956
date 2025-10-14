@@ -109,8 +109,14 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 ---
 
 ## Quiz
-1. [Pertanyaan 1]  
-   **Jawaban:**  
+1. Sebutkan tiga fungsi utama sistem operasi.
+   1.	Manajemen Proses
+Sistem operasi mengatur jalannya proses, mulai dari membuat, menghentikan, hingga menjadwalkan eksekusinya dan menghubungkan antar proses.
+   2.	Manajemen Memori
+Sistem membagi dan mengelola penggunaan RAM agar proses berjalan tanpa gangguan dan memori bisa digunakan efisien.
+   3.	Manajemen I/O
+Sistem mengatur komunikasi antara perangkat keras (seperti keyboard dan printer) dengan komputer, termasuk pengelolaan driver dan buffer.
+ 
 2. [Pertanyaan 2]  
    **Jawaban:**  
 3. [Pertanyaan 3]  
