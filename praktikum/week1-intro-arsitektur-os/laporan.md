@@ -117,17 +117,28 @@ Sistem membagi dan mengelola penggunaan RAM agar proses berjalan tanpa gangguan 
    3.	Manajemen I/O
 Sistem mengatur komunikasi antara perangkat keras (seperti keyboard dan printer) dengan komputer, termasuk pengelolaan driver dan buffer.
  
-2. [Pertanyaan 2]  
-   **Jawaban:**  
-3. [Pertanyaan 3]  
-   **Jawaban:**  
+2. Jelaskan perbedaan antara kernel mode dan user mode. 
+   Kernel mode memberi akses penuh ke perangkat keras dan semua sumber daya sistem. Hanya bagian inti sistem operasi yang berjalan di mode ini.
+   User mode memiliki akses terbatas dan digunakan oleh aplikasi. Jika butuh akses ke sistem, aplikasi harus meminta lewat system call. Crash di user mode tidak memengaruhi sistem secara keseluruhan.
+
+3. Sebutkan contoh OS dengan arsitektur monolithic dan microkernel. 
+   •	Arsitektur Monolithic:
+o	Linux
+o	MS-DOS
+o	Unix (versi awal)
+   •	Arsitektur Microkernel:
+o	Minix
+o	QNX
+o	seL4
+o	GNU Hurd
+
 
 ---
 
 ## Refleksi Diri
 Tuliskan secara singkat:
-- Apa bagian yang paling menantang minggu ini?  
-- Bagaimana cara Anda mengatasinya?  
+- Apa bagian yang paling menantang minggu ini = Membuat akun git
+- Bagaimana cara Anda mengatasinya = Saya melakukan pengecekan username, nim, mencari cara diinternet, dan bertanya kepada teman yang sudah paham.
 
 ---
 
