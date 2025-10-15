@@ -92,7 +92,7 @@ dmesg | head
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/example.png)
+<img width="1365" height="718" alt="Screenshot 2025-10-15 193306" src="https://github.com/user-attachments/assets/e03730a9-abbf-4cb3-83ea-d1fa0eece644" />
 
 ---
 
@@ -100,6 +100,19 @@ Sertakan screenshot hasil percobaan atau diagram:
 - Jelaskan makna hasil percobaan.  
 - Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).  
 - Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
+1.Hasil Percobaan
+
+Beberapa perintah Linux yang kamu jalankan dan artinya:
+
+Perintah	Fungsi	Hasil / Makna
+uname -a	Menampilkan informasi sistem operasi dan kernel	Terlihat sistem berjalan di Linux kernel 6.6.87.2-microsoft-standard-WSL2 → artinya ini adalah kernel Linux yang dimodifikasi Microsoft untuk WSL2 (Windows Subsystem for Linux 2).
+whoami	Menampilkan user yang sedang aktif	User aktif adalah nadya.
+`lsmod	head`	Menampilkan daftar modul kernel yang sedang dimuat
+`dmesg	head`	Menampilkan pesan log awal dari kernel saat bootin
+2.Fungsi Kernel	Kernel adalah inti OS yang mengatur manajemen CPU, memori, device, dan sistem file. Log dmesg menunjukkan kernel mendeteksi CPU (Intel GenuineIntel, AMD AuthenticAMD) dan mengatur peta memori (BIOS-provided RAM map). Ini adalah contoh nyata fungsi hardware abstraction dan resource management.
+System Call	Modul kernel seperti kvm dan intel_rapl_common menjadi antarmuka antara proses user (program di ruang pengguna) dan hardware. Ketika aplikasi memerlukan layanan sistem (misalnya baca file, alokasi memori), ia memanggil system call → kernel yang menanganinya.
+Arsitektur OS	WSL2 menjalankan kernel Linux asli di atas lapisan virtualisasi Windows (menggunakan teknologi Hyper-V). Jadi secara arsitektur, WSL2 = Windows host + VM ringan dengan kernel Linux. Hal ini memungkinkan aplikasi Linux berjalan langsung di Windows.
+
 
 ---
 
