@@ -13,7 +13,7 @@ Topik: Arsitektur Sistem Operasi dan Kernel
 
 ## Tujuan
 Tuliskan tujuan praktikum minggu ini.  
-1 Sistem Operasi
+1. Sistem Operasi
 Sistem operasi (Operating System / OS) adalah perangkat lunak utama yang mengatur seluruh sumber daya komputer — baik perangkat keras (hardware) maupun perangkat lunak (software) — agar dapat bekerja secara efisien dan saling berkomunikasi.
 Fungsi utamanya mencakup:
 - Manajemen Proses (Process Management)
