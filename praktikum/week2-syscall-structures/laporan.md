@@ -36,7 +36,7 @@ Linux menyediakan perintah seperti strace atau ltrace untuk menampilkan aktivita
 ---
 
 ## Dasar Teori
-Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
+Tuliskan ringkasan teori (3–5 poin) yang mendasari system call
 
 ---
 
@@ -51,28 +51,26 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 ## Kode / Perintah
 Tuliskan potongan kode atau perintah utama:
 ```bash
-uname -a
-lsmod | head
-dmesg | head
+strace ls
+strace -e trace=open,read,write,close cat /etc/passwd
+dmesg | tail -n 10
 ```
 
 ---
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/example.png)
 
 ---
 
 ## Analisis
-- Jelaskan makna hasil percobaan.  
-- Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).  
-- Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
+- Analisis bagaimana file dibuka, dibaca, dan ditutup oleh kernel.
+- Amati log kernel yang muncul. Apa bedanya output ini dengan output dari program biasa?
 
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+Tuliskan 2–3 poin kesimpulan dari praktikum system call 
 
 ---
 
