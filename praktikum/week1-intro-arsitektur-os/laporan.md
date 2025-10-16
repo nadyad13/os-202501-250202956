@@ -16,25 +16,25 @@ Tuliskan tujuan praktikum minggu ini.
 1 Sistem Operasi
 Sistem operasi (Operating System / OS) adalah perangkat lunak utama yang mengatur seluruh sumber daya komputer — baik perangkat keras (hardware) maupun perangkat lunak (software) — agar dapat bekerja secara efisien dan saling berkomunikasi.
 Fungsi utamanya mencakup:
-1.	Manajemen Proses (Process Management)
+- Manajemen Proses (Process Management)
 o	Mengatur pembuatan, penjadwalan, dan penghentian proses.
 o	Menentukan proses mana yang dijalankan oleh CPU pada waktu tertentu (CPU scheduling).
-2.	Manajemen Memori (Memory Management)
+- Manajemen Memori (Memory Management)
 o	Mengalokasikan dan membebaskan memori untuk proses yang sedang berjalan.
 o	Menjaga agar proses tidak saling mengganggu area memori satu sama lain.
-3.	Manajemen Berkas (File Management)
+- Manajemen Berkas (File Management)
 o	Mengatur pembuatan, penyimpanan, pembacaan, dan penghapusan file.
 o	Menyediakan struktur direktori agar data mudah diakses.
-4.	Manajemen Perangkat I/O (Input/Output Management)
+- Manajemen Perangkat I/O (Input/Output Management)
 o	Mengontrol perangkat keras seperti keyboard, printer, dan disk.
 o	Menyediakan antarmuka agar aplikasi dapat menggunakan perangkat tanpa harus tahu detail teknisnya.
-5.	Manajemen Penyimpanan Sekunder (Storage Management)
+- Manajemen Penyimpanan Sekunder (Storage Management)
 o	Mengatur ruang disk dan sistem file (file system).
 o	Mengoptimalkan akses ke data yang tersimpan.
-6.	Manajemen Keamanan dan Proteksi (Security & Protection)
+- Manajemen Keamanan dan Proteksi (Security & Protection)
 o	Menyediakan mekanisme autentikasi, otorisasi, dan kontrol akses.
 o	Melindungi sistem dari gangguan atau akses tidak sah.
-7.	User Interface (Antarmuka Pengguna)
+- User Interface (Antarmuka Pengguna)
 o	Bisa berupa Command-Line Interface (CLI) seperti terminal, atau Graphical User Interface (GUI) seperti Windows dan macOS.
 
 2. Peran Kernel
