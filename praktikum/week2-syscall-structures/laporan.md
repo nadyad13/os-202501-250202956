@@ -70,7 +70,12 @@ Sertakan screenshot hasil percobaan atau diagram:
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum system call 
+1.	System call berperan sebagai jembatan penting antara program aplikasi dan kernel
+Memungkinkan program untuk meminta layanan dari sistem operasi seperti pengelolaan file, memori, dan proses tanpa perlu berinteraksi langsung dengan perangkat keras.
+2.	Kernel kemudian menangani eksekusi system call ini dengan cara yang aman dan efisien.
+Saat program melakukan system call kendali sementara beralih dari mode pengguna ke mode kernel untuk menjalankan instruksi, sebelum kembali ke mode pengguna setelah tugas selesai.
+3. Perbedaan antar sistem operasi dapat memengaruhi cara system call diimplementasikan.
+Misalnya, Linux menggunakan fungsi seperti fork() untuk membuat proses baru, sementara Windows menggunakan CreateProcess() untuk fungsi serupa, meskipun keduanya pada dasarnya melakukan tugas yang sama.
 
 ---
 
