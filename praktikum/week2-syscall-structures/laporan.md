@@ -107,7 +107,7 @@ Menangani alokasi ruang memori, seperti mmap untuk petakan memori dan brk untuk 
 ## Refleksi Diri
 Tuliskan secara singkat:
 - Apa bagian yang paling menantang minggu ini = Susah dalam mengerjakan system call (dll)
-- Bagaimana cara Anda mengatasinya = 
+- Bagaimana cara Anda mengatasinya = Bertanya kepada teman yang sudah paham
 
 ---
 
