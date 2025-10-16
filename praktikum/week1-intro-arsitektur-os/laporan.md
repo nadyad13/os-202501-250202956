@@ -117,7 +117,9 @@ Arsitektur OS	WSL2 menjalankan kernel Linux asli di atas lapisan virtualisasi Wi
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+1. memahami cara kerja sistem operasi yang bertugas mengatur komunikasi antara perangkat keras dan perangkat lunak, termasuk manajemenproses, memori, dan perangkat I/O.
+2. Melalui praktikum, konsep seperti proses, thread, scheduling, dan manajemen memori dapat diterapkan secara langsung sehingga memperdalam pemahaman teoretis.
+3. belajar menganalisis masalah yang muncul saat menjalankan sistem atau program serta mencari solusi yang efisien dan tepat.
 
 ---
 
