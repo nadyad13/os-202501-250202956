@@ -1,6 +1,6 @@
 
 # Laporan Praktikum Minggu [2]
-Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
+Topik: system call
 
 ---
 
@@ -13,8 +13,25 @@ Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
 
 ## Tujuan
 Tuliskan tujuan praktikum minggu ini.  
-Contoh:  
-> Mahasiswa mampu menjelaskan fungsi utama sistem operasi dan peran kernel serta system call.
+
+1. Konsep dan Fungsi System Call dalam Sistem Operasi
+System call adalah mekanisme yang menghubungkan program pengguna dengan kernel sistem operasi. Karena program di user mode tidak boleh langsung mengakses perangkat keras, system call berfungsi sebagai perantara yang aman.
+Fungsinya meliputi: mengatur akses sumber daya, memungkinkan komunikasi antar proses, menjalankan operasi input/output, serta menjaga keamanan dan stabilitas sistem.
+
+2. Jenis-jenis System Call dan Fungsinya
+a. Manajemen Proses: untuk membuat, menjalankan, dan mengakhiri proses.
+b. Manajemen File: untuk membuka, membaca, menulis, dan menutup file.
+c. Manajemen Perangkat: untuk berinteraksi dengan perangkat keras melalui kernel.
+d. Manajemen Memori: untuk mengalokasikan dan membebaskan memori.
+Komunikasi Antar Proses: untuk bertukar data antar proses dalam sistem.
+
+3. Alur Perpindahan Mode User ke Kernel
+Saat system call dipanggil, program di user mode mengirim permintaan ke kernel melalui interrupt atau trap. CPU berpindah ke kernel mode, kernel mengeksekusi fungsi yang diminta, kemudian hasilnya dikembalikan ke program dan sistem kembali ke user mode.
+Proses ini memastikan keamanan dan pengendalian penuh oleh sistem operasi.
+
+4. Perintah Linux untuk Melihat System Call
+Linux menyediakan perintah seperti strace atau ltrace untuk menampilkan aktivitas system call dan menganalisis interaksi program dengan kernel secara singkat.
+
 
 ---
 
