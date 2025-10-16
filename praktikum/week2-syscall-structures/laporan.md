@@ -66,6 +66,8 @@ dmesg | tail -n 10
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
+<img width="1352" height="696" alt="Screenshot 2025-10-16 194124" src="https://github.com/user-attachments/assets/72aeeb2c-1f9d-432c-a655-e8def914c2b3" />
+
 
 ---
 
