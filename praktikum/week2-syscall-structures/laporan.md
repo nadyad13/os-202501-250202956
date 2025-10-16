@@ -36,7 +36,13 @@ Linux menyediakan perintah seperti strace atau ltrace untuk menampilkan aktivita
 ---
 
 ## Dasar Teori
-Tuliskan ringkasan teori (3–5 poin) yang mendasari system call
+1.	System call berfungsi sebagai jembatan penting antara program aplikasi di ruang pengguna (user space) dan kernel di ruang kernel (kernel space). 
+Program dapat meminta layanan esensial dari sistem operasi, seperti mengakses file, mengelola proses, atau menangani komunikasi antarproses.
+2.	Kernel menjalankan system call dalam mode khusus yang disebut kernel mode.
+Pendekatan ini melindungi sistem dari risiko akses langsung yang berbahaya oleh program pengguna terhadap perangkat keras atau memori.
+3.	Implementasi system call biasanya melibatkan mekanisme interrupt atau trap. Saat sebuah aplikasi memanggil system call, prosesor segera beralih dari user mode ke kernel mode melalui interrupt, sehingga kernel bisa menangani permintaan secara efektif.
+4.	Jenis system call meliputi manajemen proses (misalnya, fungsi fork dan exec), manajemen file (seperti open, read, write, dan close), komunikasi antarproses, serta pengelolaan memori (seperti mmap dan brk).
+5.	Setiap sistem operasi memiliki tabel system call yang unik. Misalnya, Linux menggunakan tabel dengan nomor unik untuk setiap fungsi, sementara Windows mengadopsi API yang berbeda tapi tetap mengikuti mekanisme serupa. 
 
 ---
 
