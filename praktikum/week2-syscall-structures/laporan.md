@@ -18,12 +18,12 @@ Tuliskan tujuan praktikum minggu ini.
 System call adalah mekanisme yang menghubungkan program pengguna dengan kernel sistem operasi. Karena program di user mode tidak boleh langsung mengakses perangkat keras, system call berfungsi sebagai perantara yang aman.
 Fungsinya meliputi: mengatur akses sumber daya, memungkinkan komunikasi antar proses, menjalankan operasi input/output, serta menjaga keamanan dan stabilitas sistem.
 
-2. Jenis-jenis System Call dan Fungsinya
-   a. Manajemen Proses: untuk membuat, menjalankan, dan mengakhiri proses.
-   b. Manajemen File: untuk membuka, membaca, menulis, dan menutup file.
-   c. Manajemen Perangkat: untuk berinteraksi dengan perangkat keras melalui kernel.
-   d. Manajemen Memori: untuk mengalokasikan dan membebaskan memori.
-   e. Komunikasi Antar Proses: untuk bertukar data antar proses dalam sistem.
+2. Jenis-jenis System Call dan Fungsinya :
+- Manajemen Proses: untuk membuat, menjalankan, dan mengakhiri proses.
+- Manajemen File: untuk membuka, membaca, menulis, dan menutup file.
+- Manajemen Perangkat: untuk berinteraksi dengan perangkat keras melalui kernel.
+- Manajemen Memori: untuk mengalokasikan dan membebaskan memori.
+- Komunikasi Antar Proses: untuk bertukar data antar proses dalam sistem.
 
 4. Alur Perpindahan Mode User ke Kernel
 Saat system call dipanggil, program di user mode mengirim permintaan ke kernel melalui interrupt atau trap. CPU berpindah ke kernel mode, kernel mengeksekusi fungsi yang diminta, kemudian hasilnya dikembalikan ke program dan sistem kembali ke user mode.
