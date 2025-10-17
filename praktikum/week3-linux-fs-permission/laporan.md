@@ -61,12 +61,12 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 
 ## Quiz
 1. Fungsi Perintah Chmod
-  Perintah chmod memungkinkan pengguna mengubah izin akses pada file atau direktori di sistem operasi Linux atau Unix. Dengan perintah ini, bisa secara tepat menentukan hak-hak spesifik, seperti siapa yang boleh membaca, menulis, atau menjalankan file tersebut, sehingga membantu mengamankan dan mengelola akses data dengan lebih efektif.
+  Chmod ini alat utama untuk ngubah izin akses file atau direktori di sistem Linux atau Unix. Dengan ini, bias mengatur siapa yang boleh membaca. Menulis atau menjalankan file itu. Ini membantu untuk menjaga keamanan data dan kelola akses agar tidak sembarangan, jadi lebih efisien dan aman.
 2. Arti dari kode permission rwxr-xr--
   Kode tersebut menunjukkan hak akses sebuah file: 
-rwx : memberikan pemilik file hak penuh untuk membaca, menulis, dan menjalankannya.
-r-x : membatasi anggota grup agar hanya bisa membaca dan menjalankan file, tanpa izin menulis.
-r-- : menyimpan akses pengguna lain hanya untuk membaca saja, tanpa kemampuan menulis atau menjalankan.
+rwx : memberikan pemilik file dapet izin penuh untuk membaca, mentulis, dan menjalankan. 
+r-x : membatasi anggota grup agar hanya bisa membaca dan menjalankan, tanpa menulis. 
+r-- : menyimpan akses untuk pengguna lain hanya bisa membaca tidak bisa menulis atau menjalankan
 Pemilik mendapat kendali penuh, grup menikmati akses terbatas, dan pengguna lain dibatasi pada fungsi dasar pembacaan.
 3. Perbedaan Antara Chown dan Chmod
    Chmod secara khusus digunakan untuk mengatur atau mengubah izin akses pada file atau direktori, sehingga menentukan tindakan apa yang diizinkan.
