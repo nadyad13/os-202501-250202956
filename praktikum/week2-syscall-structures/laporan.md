@@ -80,7 +80,7 @@ open("/etc/passwd", O_RDONLY) = 3
 Perintah open() adalah system call yang digunakan program untuk meminta kernel membuka file /etc/passwd. 
 Parameter O_RDONLY artinya file dibuka dalam mode read-only.
 Kernel mengembalikan file descriptor bernomor 3 — ini adalah “penanda” yang digunakan proses untuk mengakses file tersebut.
-➡️ Makna:
+Makna:
 Kernel memeriksa izin akses, mencari lokasi file di sistem berkas (melalui inode), lalu mempersiapkan struktur data internal untuk operasi selanjutnya.
 
 2. Membaca Isi File
@@ -92,7 +92,7 @@ Kernel menyalin data dari file di disk ke memori user space sebanyak 1424 byte.
 
 Nilai 1424 menunjukkan banyaknya byte yang berhasil dibaca.
 
-➡️ Makna:
+Makna:
 Kernel bertugas melakukan I/O operation — mengambil data dari media penyimpanan dan mengirimkannya ke proses user (cat) agar bisa ditampilkan.
 
 3. Menampilkan ke Layar
@@ -100,7 +100,7 @@ write(1, "root:x:0:0:root:/root:/bin/bash\n"..., 1424)
 write() digunakan untuk menulis data ke file descriptor 1, yaitu stdout (layar terminal).
 Data hasil read() tadi dikirimkan ke terminal melalui kernel.
 
-➡️ Makna:
+Makna:
 Kernel menyalurkan data dari memori user menuju perangkat output (layar) menggunakan mekanisme file descriptor.
 
 4. Menutup File
@@ -108,7 +108,7 @@ close(3) = 0
 Setelah selesai membaca, program menutup file descriptor 3 menggunakan close().
 Kernel kemudian melepaskan sumber daya yang digunakan untuk file itu (misalnya buffer dan inode reference).
 
-➡️ Makna:
+Makna:
 Kernel memastikan bahwa file tidak lagi digunakan, mencegah kebocoran sumber daya (resource leak).
 
 5. Menutup Output dan Error Stream
