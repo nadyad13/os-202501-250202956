@@ -75,6 +75,57 @@ Sertakan screenshot hasil percobaan atau diagram:
 - Analisis bagaimana file dibuka, dibaca, dan ditutup oleh kernel.
 - Amati log kernel yang muncul. Apa bedanya output ini dengan output dari program biasa?
 
+- 1. Membuka File
+open("/etc/passwd", O_RDONLY) = 3
+Perintah open() adalah system call yang digunakan program untuk meminta kernel membuka file /etc/passwd. 
+Parameter O_RDONLY artinya file dibuka dalam mode read-only.
+Kernel mengembalikan file descriptor bernomor 3 — ini adalah “penanda” yang digunakan proses untuk mengakses file tersebut.
+➡️ Makna:
+Kernel memeriksa izin akses, mencari lokasi file di sistem berkas (melalui inode), lalu mempersiapkan struktur data internal untuk operasi selanjutnya.
+
+2. Membaca Isi File
+read(3, "root:x:0:0:root:/root:/bin/bash\n"..., 131072) = 1424
+
+read() meminta kernel membaca isi file dari descriptor 3 (yakni /etc/passwd).
+
+Kernel menyalin data dari file di disk ke memori user space sebanyak 1424 byte.
+
+Nilai 1424 menunjukkan banyaknya byte yang berhasil dibaca.
+
+➡️ Makna:
+Kernel bertugas melakukan I/O operation — mengambil data dari media penyimpanan dan mengirimkannya ke proses user (cat) agar bisa ditampilkan.
+
+3. Menampilkan ke Layar
+write(1, "root:x:0:0:root:/root:/bin/bash\n"..., 1424)
+write() digunakan untuk menulis data ke file descriptor 1, yaitu stdout (layar terminal).
+Data hasil read() tadi dikirimkan ke terminal melalui kernel.
+
+➡️ Makna:
+Kernel menyalurkan data dari memori user menuju perangkat output (layar) menggunakan mekanisme file descriptor.
+
+4. Menutup File
+close(3) = 0
+Setelah selesai membaca, program menutup file descriptor 3 menggunakan close().
+Kernel kemudian melepaskan sumber daya yang digunakan untuk file itu (misalnya buffer dan inode reference).
+
+➡️ Makna:
+Kernel memastikan bahwa file tidak lagi digunakan, mencegah kebocoran sumber daya (resource leak).
+
+5. Menutup Output dan Error Stream
+close(1) = 0
+close(2) = 0
+close(1) dan close(2) menutup stdout dan stderr setelah program cat selesai berjalan.
+
+
+| Aspek               | Log Kernel (`dmesg`)                                                            | Program Biasa (mis. `cat`, `ls`, `echo`)                                 |
+| ------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| **Sumber pesan**    | Dari **kernel Linux**                                                           | Dari **program user** di user space                                      |
+| **Isi pesan**       | Aktivitas sistem (driver, modul, hardware, virtualisasi, error internal kernel) | Hasil operasi spesifik program (menampilkan file, teks, direktori, dll.) |
+| **Level kerja**     | Level **kernel space**                                                          | Level **user space**                                                     |
+| **Tujuan utama**    | Diagnostik, debugging, status perangkat                                         | Memberi hasil langsung ke pengguna                                       |
+| **Dihasilkan oleh** | Kernel dan modulnya                                                             | Proses atau aplikasi biasa                                               |
+
+
 ---
 
 ## Kesimpulan
