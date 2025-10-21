@@ -149,9 +149,10 @@ rw- → hanya pemilik (owner) bisa membaca dan menulis.
 Jadi, sesudah chmod 600, file hanya dapat diakses oleh pemiliknya (tidak bisa dibaca maupun ditulis oleh orang lain).
 
 Kesimpulan Perbedaan
-Kondisi	Kode Hak Akses	Pemilik	Grup	Lainnya
-Sebelum	rw-r--r--	Baca & Tulis	Baca	Baca
-Sesudah	rw-------	Baca & Tulis	-	-
+| Kondisi | Kode Hak Akses | Pemilik      | Grup | Lainnya |
+| ------- | -------------- | ------------ | ---- | ------- |
+| Sebelum | `rw-r--r--`    | Baca & Tulis | Baca | Baca    |
+| Sesudah | `rw-------`    | Baca & Tulis | -    | -       |
 
 Makna perubahan:
 Perintah chmod 600 membatasi akses file agar hanya pemilik yang bisa membuka dan mengedit, sementara pengguna lain tidak bisa melihat atau mengakses file sama sekali — ini meningkatkan keamanan dan privasi data.
