@@ -23,7 +23,11 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 ---
 
 ## Dasar Teori
-Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
+1.	Sistem berkas Linux tersusun secara hierarkis, dimulai dari direktori root (/), dan setiap file atau direktori memiliki path absolut maupun relatif untuk menentukan lokasinya.
+2.	Perintah dasar Linux seperti ls, cd, cp, mv, rm, mkdir, dan rmdir digunakan untuk menavigasi dan mengelola file serta direktori melalui terminal.
+3.	Permission (hak akses) menentukan siapa yang dapat membaca (r), menulis (w), dan mengeksekusi (x) file atau direktori. Hak akses dibagi untuk owner, group, dan others.
+4.	Ownership (kepemilikan) menunjukkan siapa pengguna (user owner) dan kelompok (group owner) yang memiliki file atau direktori.
+5.	Perintah chmod, chown, dan chgrp digunakan untuk mengubah hak akses dan kepemilikan, yang berperan penting dalam menjaga keamanan dan kontrol sistem Linux.
 
 ---
 
@@ -155,7 +159,9 @@ Perintah chmod 600 membatasi akses file agar hanya pemilik yang bisa membuka dan
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+1.	Pengelolaan file dan direktori di Linux dapat dilakukan secara efisien menggunakan perintah dasar seperti ls, cd, cp, mv, rm, mkdir, dan rmdir melalui terminal.
+2.	Konsep permission dan ownership sangat penting untuk mengatur hak akses pengguna terhadap file dan direktori, sehingga keamanan dan integritas sistem tetap terjaga.
+3.	Perintah chmod, chown, dan chgrp memungkinkan pengguna atau administrator sistem untuk mengatur hak akses dan kepemilikan sesuai kebutuhan masing-masing pengguna.
 
 ---
 
