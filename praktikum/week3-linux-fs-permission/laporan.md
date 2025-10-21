@@ -23,11 +23,15 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 ---
 
 ## Dasar Teori
-1.	Sistem berkas Linux tersusun secara hierarkis, dimulai dari direktori root (/), dan setiap file atau direktori memiliki path absolut maupun relatif untuk menentukan lokasinya.
-2.	Perintah dasar Linux seperti ls, cd, cp, mv, rm, mkdir, dan rmdir digunakan untuk menavigasi dan mengelola file serta direktori melalui terminal.
-3.	Permission (hak akses) menentukan siapa yang dapat membaca (r), menulis (w), dan mengeksekusi (x) file atau direktori. Hak akses dibagi untuk owner, group, dan others.
-4.	Ownership (kepemilikan) menunjukkan siapa pengguna (user owner) dan kelompok (group owner) yang memiliki file atau direktori.
-5.	Perintah chmod, chown, dan chgrp digunakan untuk mengubah hak akses dan kepemilikan, yang berperan penting dalam menjaga keamanan dan kontrol sistem Linux.
+Pada praktikum minggu ini, mahasiswa akan mempelajari pengelolaan file dan direktori menggunakan perintah dasar Linux, serta konsep permission dan ownership.
+Praktikum berfokus pada:
+
+- Navigasi sistem file dengan ls, pwd, cd, dan cat.
+- Pengaturan hak akses file menggunakan chmod.
+- Pengubahan kepemilikan file menggunakan chown.
+- Dokumentasi hasil eksekusi dan pengelolaan repositori praktikum.
+
+Tujuan utama dari praktikum ini adalah agar mahasiswa mampu mengoperasikan perintah Linux dasar dengan benar, memahami sistem izin (permission), dan mendokumentasikan hasilnya dalam format laporan Git.
 
 ---
 
