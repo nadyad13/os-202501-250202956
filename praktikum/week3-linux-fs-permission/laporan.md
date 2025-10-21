@@ -107,45 +107,29 @@ screenshot hasil Linux
 
 ## Analisis
 Sebelum chmod 600
-
 Output dari ls -l percobaan.txt:
-
 -rw-r--r-- 1 nadya nadya 25 Oct 21 17:45 percobaan.txt
 
-
 Artinya:
-
 -rw-r--r-- = hak akses file.
 
 rw- → pemilik (owner: nadya) dapat membaca dan menulis.
-
 r-- → grup (group: nadya) hanya dapat membaca.
-
 r-- → pengguna lain (others) hanya dapat membaca.
-
 Jadi, sebelum chmod 600, semua pengguna bisa membaca file, tetapi hanya pemilik yang bisa menulis.
 
 Sesudah chmod 600
-
 Setelah perintah:
-
 chmod 600 percobaan.txt
 
-
 Jika dicek lagi:
-
 ls -l percobaan.txt
 -rw------- 1 nadya nadya 25 Oct 21 17:45 percobaan.txt
 
-
 Artinya:
-
 -rw-------
-
 rw- → hanya pemilik (owner) bisa membaca dan menulis.
-
 --- → grup dan pengguna lain tidak punya akses sama sekali.
-
 Jadi, sesudah chmod 600, file hanya dapat diakses oleh pemiliknya (tidak bisa dibaca maupun ditulis oleh orang lain).
 
 Kesimpulan Perbedaan
