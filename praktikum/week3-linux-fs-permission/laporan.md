@@ -1,7 +1,6 @@
 
 # Laporan Praktikum Minggu [3]
-Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
-
+Topik: Manajemen File dan Permission di Linux
 ---
 
 ## Identitas
@@ -13,8 +12,13 @@ Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
 
 ## Tujuan
 Tuliskan tujuan praktikum minggu ini.  
-Contoh:  
-> Mahasiswa mampu menjelaskan fungsi utama sistem operasi dan peran kernel serta system call.
+Setelah menyelesaikan tugas ini, mahasiswa mampu:
+
+1. Menggunakan perintah ls, pwd, cd, cat untuk navigasi file dan direktori.
+2. Menggunakan chmod dan chown untuk manajemen hak akses file.
+3. Menjelaskan hasil output dari perintah Linux dasar.
+4. Menyusun laporan praktikum dengan struktur yang benar.
+5. Mengunggah dokumentasi hasil ke Git Repository tepat waktu.
 
 ---
 
@@ -24,11 +28,60 @@ Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
 ---
 
 ## Langkah Praktikum
-1. Langkah-langkah yang dilakukan.  
-2. Perintah yang dijalankan.  
-3. File dan kode yang dibuat.  
-4. Commit message yang digunakan.
+1. **Setup Environment**
+   - Gunakan Linux (Ubuntu/WSL).
+   - Pastikan folder kerja berada di dalam direktori repositori Git praktikum:
+     ```
+     praktikum/week3-linux-fs-permission/
+     ```
 
+2. **Eksperimen 1 – Navigasi Sistem File**
+   Jalankan perintah berikut:
+   ```bash
+   pwd
+   ls -l
+   cd /tmp
+   ls -a
+   ```
+   - Jelaskan hasil tiap perintah.
+   - Catat direktori aktif, isi folder, dan file tersembunyi (jika ada).
+
+3. **Eksperimen 2 – Membaca File**
+   Jalankan perintah:
+   ```bash
+   cat /etc/passwd | head -n 5
+   ```
+   - Jelaskan isi file dan struktur barisnya (user, UID, GID, home, shell).
+
+4. **Eksperimen 3 – Permission & Ownership**
+   Buat file baru:
+   ```bash
+   echo "Hello <NAME><NIM>" > percobaan.txt
+   ls -l percobaan.txt
+   chmod 600 percobaan.txt
+   ls -l percobaan.txt
+   ```
+   - Analisis perbedaan sebelum dan sesudah chmod.  
+   - Ubah pemilik file (jika memiliki izin sudo):
+   ```bash
+   sudo chown root percobaan.txt
+   ls -l percobaan.txt
+   ```
+   - Catat hasilnya.
+
+5. **Eksperimen 4 – Dokumentasi**
+   - Ambil screenshot hasil terminal dan simpan di:
+     ```
+     praktikum/week3-linux-fs-permission/screenshots/
+     ```
+   - Tambahkan analisis hasil pada `laporan.md`.
+
+6. **Commit & Push**
+   ```bash
+   git add .
+   git commit -m "Minggu 3 - Linux File System & Permission"
+   git push origin main
+   ```
 ---
 
 ## Kode / Perintah
@@ -42,15 +95,62 @@ dmesg | head
 ---
 
 ## Hasil Eksekusi
-Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/example.png)
+screenshot hasil Linux
+<img width="1365" height="717" alt="final percobaan linux" src="https://github.com/user-attachments/assets/8231f560-8c86-44f6-abdc-27f23fc480c2" />
+
 
 ---
 
 ## Analisis
-- Jelaskan makna hasil percobaan.  
-- Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).  
-- Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
+Sebelum chmod 600
+
+Output dari ls -l percobaan.txt:
+
+-rw-r--r-- 1 nadya nadya 25 Oct 21 17:45 percobaan.txt
+
+
+Artinya:
+
+-rw-r--r-- = hak akses file.
+
+rw- → pemilik (owner: nadya) dapat membaca dan menulis.
+
+r-- → grup (group: nadya) hanya dapat membaca.
+
+r-- → pengguna lain (others) hanya dapat membaca.
+
+Jadi, sebelum chmod 600, semua pengguna bisa membaca file, tetapi hanya pemilik yang bisa menulis.
+
+Sesudah chmod 600
+
+Setelah perintah:
+
+chmod 600 percobaan.txt
+
+
+Jika dicek lagi:
+
+ls -l percobaan.txt
+-rw------- 1 nadya nadya 25 Oct 21 17:45 percobaan.txt
+
+
+Artinya:
+
+-rw-------
+
+rw- → hanya pemilik (owner) bisa membaca dan menulis.
+
+--- → grup dan pengguna lain tidak punya akses sama sekali.
+
+Jadi, sesudah chmod 600, file hanya dapat diakses oleh pemiliknya (tidak bisa dibaca maupun ditulis oleh orang lain).
+
+Kesimpulan Perbedaan
+Kondisi	Kode Hak Akses	Pemilik	Grup	Lainnya
+Sebelum	rw-r--r--	Baca & Tulis	Baca	Baca
+Sesudah	rw-------	Baca & Tulis	-	-
+
+Makna perubahan:
+Perintah chmod 600 membatasi akses file agar hanya pemilik yang bisa membuka dan mengedit, sementara pengguna lain tidak bisa melihat atau mengakses file sama sekali — ini meningkatkan keamanan dan privasi data.
 
 ---
 
