@@ -156,6 +156,12 @@ Perintah chmod 600 membatasi akses file agar hanya pemilik yang bisa membuka dan
 
 ## Tugas 
 
+1. Dokumentasikan hasil seluruh perintah pada tabel observasi di laporan.md.
+2. Jelaskan fungsi tiap perintah dan arti kolom permission (rwxr-xr--).
+3. Analisis peran chmod dan chown dalam keamanan sistem Linux.
+4. Upload hasil dan laporan ke repositori Git sebelum deadline.
+
+
 
 | No | Perintah yang Dijalankan                          | Hasil / Output                                                              | Makna & Penjelasan                                                                                                                                                             |                                                                                                                        |
 | -- | ------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
