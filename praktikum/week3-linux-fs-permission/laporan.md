@@ -162,6 +162,7 @@ Perintah chmod 600 membatasi akses file agar hanya pemilik yang bisa membuka dan
 4. Upload hasil dan laporan ke repositori Git sebelum deadline.
 
 
+1
 
 | No | Perintah yang Dijalankan                          | Hasil / Output                                                              | Makna & Penjelasan                                                                                                                                                             |                                                                                                                        |
 | -- | ------------------------------------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
@@ -176,6 +177,25 @@ Perintah chmod 600 membatasi akses file agar hanya pemilik yang bisa membuka dan
 | 9  | `ls -l percobaan.txt`                             | `-rw------- 1 nadya nadya 25 Oct 22 17:15 percobaan.txt`                    | Menunjukkan perubahan hak akses berhasil: hanya `nadya` yang dapat membaca & menulis file.                                                                                     |                                                                                                                        |
 | 10 | `sudo chown root percobaan.txt`                   | Diminta password sudo; setelah gagal 2x, perintah tetap dijalankan.         | Mengubah pemilik (owner) file menjadi `root`. Setelah berhasil, owner file berubah dari `nadya` menjadi `root`.                                                                |                                                                                                                        |
 | 11 | `ls -l percobaan.txt`                             | `-rw------- 1 root nadya 25 Oct 22 17:15 percobaan.txt`                     | Menunjukkan bahwa file sekarang dimiliki oleh user `root`, sedangkan grupnya masih `nadya`. Izin tetap sama (`rw-------`).                                                     |                                                                                                                        |
+
+
+2. Fungsi Tiap Perintah (Terkait Permission)
+- ls -l: Menampilkan daftar file beserta detail seperti permission (misal, "rwxr-xr--"), ukuran, pemilik, dan waktu modifikasi.
+- chmod: Mengubah permission file/direktori, menggunakan notasi simbolik (e.g., u+x) atau numerik (e.g., 755).
+- chown: Mengubah pemilik file/direktori.
+  
+- Arti Kolom Permission (rwxr-xr--)
+   
+Struktur: 10 karakter, dimulai dengan tipe file (e.g., - untuk file biasa), lalu 3 set untuk Owner, Group, dan Others.
+rwxr-xr-- berarti:
+- Owner: rwx (bisa baca, tulis, eksekusi).
+- Group: r-x (bisa baca dan eksekusi, tapi tidak tulis).
+- Others: r-- (hanya bisa baca).
+
+
+3. Chmod digunakan untuk mengubah izin akses file, yang intinya membantu menerapkan prinsip "least privilege" maksudnya, memberikan izin paling minimal yang diperlukan aja. Dengan begitu, bisa mencegah akses yang tidak sah, seperti dengan batasi eksekusi atau modifikasi file, agar data sensitif tetap aman. jika disalahgunakan, misalnya kasih izin 777, bisa timbul kerentanan, seperti privilege escalation, di mana seseorang bisa dapet akses lebih dari yang seharusnya.Sedangkan , chown fungsinya buat ganti kepemilikan file, agar hanya pengguna atau grup yang berwenang yang bisa akses. Ini juga bantu cegah serangan seperti tampering atau escalation, di mana file dimanipulasi atau akses ditingkatin secara tidak sah Risiko utamanya adalah jika penyerang berhasil menggunakan chown untuk mengambil alih file sensitif, yang bisa membahayakan sistem.
+
+Secara keseluruhan, kedua perintah ini dukung model keamanan Linux dengan ngontrol akses secara ketat. Tapi kita harus hati-hati dalam menggunakannya, misalnya menggunakan sudo dan melakukan pemantauan rutin agar tidak ada celah keamanan. Praktik terbaiknya adalah gabungin sama audit reguler, supaya integritas sistem tetap terjaga. Tanpa pengawasan ini, satu kesalahan kecil aja bisa buka pintu buat ancaman besar.
 
 
 ## Quiz
