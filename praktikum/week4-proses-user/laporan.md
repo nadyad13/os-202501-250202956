@@ -160,12 +160,35 @@ Fungsi: Menampilkan nama atau perintah yang digunakan untuk menjalankan proses.
 ## Tugas dan Quiz
 
 ### Tugas
-1. Dokumentasikan hasil semua perintah dan jelaskan fungsi tiap perintah.  
+1. Dokumentasikan hasil semua perintah dan jelaskan fungsi tiap perintah.
+- whoami
+Perintah whoami digunakan untuk mengetahui nama user yang sedang aktif di terminal. Hasil menunjukkan bahwa user yang sedang login adalah nadya.
+- id
+Perintah id menampilkan identitas lengkap user, termasuk UID, GID, dan grup yang diikuti. Hasil menunjukkan user nadya memiliki UID 1000 dan tergabung dalam beberapa grup penting seperti sudo dan adm.
+- groups
+Perintah groups digunakan untuk melihat daftar grup tempat user tergabung. Output menunjukkan nadya termasuk dalam grup adm, sudo, dan users, yang memberi hak akses administratif.
+- sudo adduser praktikan
+Perintah ini berhasil menambahkan user baru bernama praktikan, lengkap dengan home directory dan password. User ini juga otomatis dimasukkan ke dalam grup users.
+- sudo passwd praktikan
+Perintah passwd berfungsi untuk mengatur atau mengubah password user. Hasil menunjukkan password untuk user praktikan berhasil diperbarui dengan sukses.
+- ps aux | head -10
+Perintah ini menampilkan daftar proses yang sedang berjalan di sistem beserta informasi penting seperti PID, CPU, dan memori. Hasil menunjukkan proses sistem utama yang dijalankan oleh user root dan systemd.
+- top -n 1
+Perintah top memberikan tampilan dinamis kondisi sistem, termasuk beban CPU, penggunaan memori, dan proses aktif. Opsi -n 1 menampilkan data satu kali saja. Hasil menunjukkan sistem dalam keadaan ringan (load rendah).
+- sleep 1000 &
+Perintah ini menjalankan proses sleep selama 1000 detik di background, memungkinkan terminal tetap digunakan untuk perintah lain. PID proses sleep adalah 586.
+- ps aux | grep sleep
+Perintah ini digunakan untuk mengecek apakah proses sleep sedang berjalan. Output menunjukkan proses sleep dengan PID 586 aktif di background sebelum dihentikan.
+- kill 586
+Perintah kill mengirim sinyal untuk menghentikan proses tertentu berdasarkan PID. Proses sleep 1000 berhasil dihentikan, terbukti dari pesan “Terminated”.
+- pstree -p | head -20
+Perintah ini menampilkan hierarki proses dalam bentuk pohon dengan PID-nya. Hasil menunjukkan hubungan antara proses utama systemd(1) dan proses turunannya seperti cron, dbus-daemon, serta bash.
+
 2. Gambarkan hierarki proses dalam bentuk diagram pohon (`pstree`) di laporan.
 
 <img width="4002" height="1072" alt="diagrampohon" src="https://github.com/user-attachments/assets/b0dc47c1-a374-4486-ab0d-7bd831207969" />
 
-2. Jelaskan hubungan antara user management dan keamanan sistem Linux.
+3. Jelaskan hubungan antara user management dan keamanan sistem Linux.
 - Pengendalian akses:
 User management menentukan siapa yang boleh mengakses sistem dan sumber daya tertentu. Dengan mengatur akun dan hak akses dengan tepat, hanya pengguna yang berwenang yang dapat menjalankan perintah atau mengakses file penting.
 - Pembatasan hak istimewa:
