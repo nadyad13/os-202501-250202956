@@ -157,14 +157,13 @@ Fungsi: Menampilkan nama atau perintah yang digunakan untuk menjalankan proses.
 2.	Manajemen User dan Group: berperan penting untukpengguna melalui perintah useradd, passwd, dan groups bantu tetapkan hak akses dan izin file untuk jaga keamanan sistem.
 3.	Multitasking dan Multiuser: memungkinkan banyak proses dan pengguna jalan bersamaan tanpa gangguan, bikin sistem stabil dan efektif untuk digunakan Bersama.
 
+
 ---
 ## Tugas dan Quiz
 
 ### Tugas
 1. Dokumentasikan hasil semua perintah dan jelaskan fungsi tiap perintah.  
 2. Gambarkan hierarki proses dalam bentuk diagram pohon (`pstree`) di laporan.
-<img width="4002" height="1072" alt="diagrampohon" src="https://github.com/user-attachments/assets/45c50564-c914-4896-9489-8350ba36598e" />
-
 
 3. Jelaskan hubungan antara user management dan keamanan sistem Linux.
 - Pengendalian akses:
