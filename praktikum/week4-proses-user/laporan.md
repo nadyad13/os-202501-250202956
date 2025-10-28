@@ -107,14 +107,16 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 
 ## Analisis
 2. Jelaskan setiap output dan fungsinya(whoami, id, groups)
-1. Perintah whoami
+
+   
+- Perintah whoami
 Fungsi:
 Menampilkan nama user (pengguna) yang sedang aktif login di sistem saat ini.
 Penjelasan output:
 Output nadya berarti user yang sedang menjalankan terminal saat ini bernama nadya.
 Perintah ini berguna untuk memastikan kamu sedang berada sebagai user siapa (terutama jika sering berpindah ke root dengan sudo).
 
-2. Perintah id
+- Perintah id
 Fungsi:
 Menampilkan informasi identitas lengkap user, termasuk UID (User ID), GID (Group ID), Daftar grup yang diikuti user
 Penjelasan output:
@@ -122,7 +124,7 @@ uid=1000(nadya) → ID unik user nadya adalah 1000
 gid=1000(nadya) → ID grup utama user nadya adalah 1000
 groups=1000(nadya),27(sudo) → User nadya termasuk dalam dua grup: nadya (utama) dan sudo (grup dengan hak admin)
 
-3. Perintah groups
+- Perintah groups
 Fungsi:
 Menampilkan grup-grup yang diikuti oleh user saat ini.
 Penjelasan output:
@@ -130,19 +132,32 @@ Menunjukkan bahwa user nadya tergabung dalam dua grup:
 nadya (grup utama)
 sudo (grup tambahan yang memberikan akses administrasi)
 
+
+
+
+
+
+
+
 3. Jelaskan kolom penting seperti PID, USER, %CPU, %MEM, COMMAND.
-1. PID (Process ID)
+   
+- PID (Process ID)
 Fungsi: Menunjukkan nomor unik yang diberikan sistem untuk setiap proses yang sedang berjalan.
-2. USER
+- USER
 Fungsi: Menunjukkan nama user (pengguna) yang menjalankan proses tersebut.
-3. %CPU
+- %CPU
 Fungsi: Menunjukkan persentase penggunaan CPU oleh proses tersebut.
-4. %MEM
+- %MEM
 Fungsi: Menunjukkan persentase penggunaan memori (RAM) oleh proses.
-5. COMMAND
+- COMMAND
 Fungsi: Menampilkan nama atau perintah yang digunakan untuk menjalankan proses.
 
+
 4. Catat PID proses sleep.
+
+
+
+
 5. Amati hierarki proses dan identifikasi proses induk (init/systemd).
 
 ---
