@@ -155,10 +155,26 @@ Fungsi: Menampilkan nama atau perintah yang digunakan untuk menjalankan proses.
 
 4. Catat PID proses sleep.
 
-
+nadya        586  0.0  0.1   3124  1664 pts/0    S    17:07   0:00 sleep 1000
+nadya        588  0.0  0.1   4088  1920 pts/0    S+   17:08   0:00 grep --color=auto sleep
 
 
 5. Amati hierarki proses dan identifikasi proses induk (init/systemd).
+
+Hierarki Proses :
+- Proses paling atas adalah systemd(1), yang memiliki PID 1.
+- systemd berfungsi sebagai init process — yaitu proses pertama yang dijalankan oleh kernel setelah sistem menyala.
+- Semua proses lain yang berjalan di sistem merupakan turunan langsung atau tidak langsung dari systemd(1).
+
+Indentifikasi proses induk :
+- Di bawah systemd(1) terdapat berbagai layanan sistem seperti:
+- agetty → menangani login terminal.
+- cron → menjadwalkan dan menjalankan tugas otomatis.
+- dbus-daemon → komunikasi antarproses.
+- rsyslogd → menangani pencatatan log sistem.
+- systemd-journald, systemd-logind, systemd-resolved → bagian dari layanan systemd.
+- Proses bash(354) adalah shell yang digunakan oleh user nadya, yang kemudian memunculkan proses lain seperti pstree dan head.
+
 
 ---
 
