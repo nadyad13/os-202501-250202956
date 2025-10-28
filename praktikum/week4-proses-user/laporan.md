@@ -162,8 +162,8 @@ Fungsi: Menampilkan nama atau perintah yang digunakan untuk menjalankan proses.
 ### Tugas
 1. Dokumentasikan hasil semua perintah dan jelaskan fungsi tiap perintah.  
 2. Gambarkan hierarki proses dalam bentuk diagram pohon (`pstree`) di laporan.
+2.  <img width="4002" height="1072" alt="diagrampohon" src="https://github.com/user-attachments/assets/2855d6e7-4588-4ffb-8fbb-d213d0b4a1a0" />
 
-2. <img width="4002" height="1072" alt="diagram pohon" src="https://github.com/user-attachments/assets/66d4d201-fc58-465f-9359-12c05e199c8c" />
 
 
 
