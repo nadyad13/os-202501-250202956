@@ -103,8 +103,16 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
    git push origin main
    ```
 ---
+## Hasil Eksekusi
+
+<img width="1343" height="718" alt="proses user1" src="https://github.com/user-attachments/assets/f277243b-7ad4-4dbf-a651-26e331bf5a63" />
+
+<img width="1345" height="718" alt="proses user2" src="https://github.com/user-attachments/assets/eef951bb-ba99-49ef-b9c1-466437c132f3" />
+
+<img width="1344" height="716" alt="proses user3" src="https://github.com/user-attachments/assets/cbd55e92-14e0-42ce-ba09-397ad148e878" />
 
 
+---
 ## Analisis
 2. Jelaskan setiap output dan fungsinya(whoami, id, groups)
 
