@@ -161,7 +161,11 @@ Fungsi: Menampilkan nama atau perintah yang digunakan untuk menjalankan proses.
 ## Tugas dan Quiz
 ### Tugas
 1. Dokumentasikan hasil semua perintah dan jelaskan fungsi tiap perintah.  
-2. Gambarkan hierarki proses dalam bentuk diagram pohon (`pstree`) di laporan.  
+2. Gambarkan hierarki proses dalam bentuk diagram pohon (`pstree`) di laporan.
+
+2. 
+
+
 3. Jelaskan hubungan antara user management dan keamanan sistem Linux.
 - Pengendalian akses:
 User management menentukan siapa yang boleh mengakses sistem dan sumber daya tertentu. Dengan mengatur akun dan hak akses dengan tepat, hanya pengguna yang berwenang yang dapat menjalankan perintah atau mengakses file penting.
