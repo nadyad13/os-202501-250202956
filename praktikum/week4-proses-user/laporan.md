@@ -106,7 +106,9 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/example.png)
+
+![Screenshot hasil](<screenshots/diagrampohon.png>)
+
 
 ---
 
