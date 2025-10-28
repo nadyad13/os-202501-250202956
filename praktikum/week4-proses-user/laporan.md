@@ -1,4 +1,3 @@
-
 # Laporan Praktikum Minggu [X]
 Topik: Proses User
 
@@ -19,6 +18,8 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
 3. Menggunakan perintah untuk membuat dan mengelola user.
 4. Menghentikan atau mengontrol proses tertentu menggunakan PID.
 5. Menjelaskan kaitan antara manajemen user dan keamanan sistem.
+
+
 ---
 
 ## Dasar Teori
@@ -100,17 +101,9 @@ Setelah menyelesaikan tugas ini, mahasiswa mampu:
    git add .
    git commit -m "Minggu 4 - Manajemen Proses & User"
    git push origin main
-```
-
+   ```
 ---
 
-## Hasil Eksekusi
-Sertakan screenshot hasil percobaan atau diagram:
-
-![Screenshot hasil](<screenshots/diagrampohon.png>)
-
-
----
 
 ## Analisis
 2. Jelaskan setiap output dan fungsinya(whoami, id, groups)
@@ -161,13 +154,18 @@ Fungsi: Menampilkan nama atau perintah yang digunakan untuk menjalankan proses.
 
 
 ---
+
+
+
 ## Tugas dan Quiz
 
 ### Tugas
 1. Dokumentasikan hasil semua perintah dan jelaskan fungsi tiap perintah.  
 2. Gambarkan hierarki proses dalam bentuk diagram pohon (`pstree`) di laporan.
 
-3. Jelaskan hubungan antara user management dan keamanan sistem Linux.
+<img width="4002" height="1072" alt="diagrampohon" src="https://github.com/user-attachments/assets/b0dc47c1-a374-4486-ab0d-7bd831207969" />
+
+2. Jelaskan hubungan antara user management dan keamanan sistem Linux.
 - Pengendalian akses:
 User management menentukan siapa yang boleh mengakses sistem dan sumber daya tertentu. Dengan mengatur akun dan hak akses dengan tepat, hanya pengguna yang berwenang yang dapat menjalankan perintah atau mengakses file penting.
 - Pembatasan hak istimewa:
