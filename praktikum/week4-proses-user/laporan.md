@@ -111,7 +111,7 @@ Sertakan screenshot hasil percobaan atau diagram:
 ---
 
 ## Analisis
-2. Jelaskan setiap output dan fungsinya.
+2. Jelaskan setiap output dan fungsinya(whoami, id, groups)
 3. Jelaskan kolom penting seperti PID, USER, %CPU, %MEM, COMMAND.
 4. Catat PID proses sleep.
 5. Amati hierarki proses dan identifikasi proses induk (init/systemd).
