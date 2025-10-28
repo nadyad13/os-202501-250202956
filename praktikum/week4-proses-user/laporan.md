@@ -159,12 +159,11 @@ Fungsi: Menampilkan nama atau perintah yang digunakan untuk menjalankan proses.
 
 ---
 ## Tugas dan Quiz
+
 ### Tugas
 1. Dokumentasikan hasil semua perintah dan jelaskan fungsi tiap perintah.  
 2. Gambarkan hierarki proses dalam bentuk diagram pohon (`pstree`) di laporan.
-2.  <img width="4002" height="1072" alt="diagrampohon" src="https://github.com/user-attachments/assets/2855d6e7-4588-4ffb-8fbb-d213d0b4a1a0" />
-
-
+<img width="4002" height="1072" alt="diagrampohon" src="https://github.com/user-attachments/assets/45c50564-c914-4896-9489-8350ba36598e" />
 
 
 3. Jelaskan hubungan antara user management dan keamanan sistem Linux.
