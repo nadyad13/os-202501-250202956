@@ -259,8 +259,8 @@ User root adalah akun administrator utama di Linux, dengan akses penuh ke seluru
 
 ## Refleksi Diri
 Tuliskan secara singkat:
-- Apa bagian yang paling menantang minggu ini?  
-- Bagaimana cara Anda mengatasinya?  
+- Apa bagian yang paling menantang minggu ini? = tidak bisa upload gambar
+- Bagaimana cara Anda mengatasinya? = bertanya kepada teman
 
 ---
 
