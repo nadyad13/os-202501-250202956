@@ -1,5 +1,5 @@
 
-# Laporan Praktikum Minggu [X]
+# Laporan Praktikum Minggu [5]
 Topik: scheduling fcfs dan sjf
 
 ---
