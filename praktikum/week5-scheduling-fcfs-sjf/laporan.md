@@ -202,7 +202,8 @@ Rata rata FJS
 4. Simpan seluruh hasil dan analisis ke `laporan.md`.  
 
 **JAWABAN**
-1. FCFS (First Come First Served)
+
+3. FCFS (First Come First Served)
 
 Kelebihan:
 
@@ -220,7 +221,7 @@ Kelemahan:
 
 - Tidak mempertimbangkan lama waktu eksekusi, sehingga bisa menurunkan throughput sistem.
 
-2. SJF (Shortest Job First)
+SJF (Shortest Job First)
 
 Kelebihan:
 
