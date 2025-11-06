@@ -203,6 +203,18 @@ Rata rata FJS
 
 **JAWABAN**
 
+1. 
+<img width="1009" height="480" alt="FCFS dan SJF_1" src="https://github.com/user-attachments/assets/8102c538-953c-4c40-90c2-ad06c9fc9fc0" />
+
+
+2. 
+
+| Algoritma | Avg Waiting Time | Avg Turnaround Time | Kelebihan | Kekurangan |
+|------------|------------------|----------------------|------------|-------------|
+| FCFS | 8,75 | 14,75 | Sederhana dan mudah diterapkan | Tidak efisien untuk proses panjang |
+| SJF | 8,5 | 14,5 | Optimal untuk job pendek | Menyebabkan *starvation* pada job panjang |
+   
+
 3. FCFS (First Come First Served)
 
 Kelebihan:
