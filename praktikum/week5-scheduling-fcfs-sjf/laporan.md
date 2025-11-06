@@ -257,7 +257,7 @@ SJF sulit diterapkan karena sistem tidak selalu mengetahui waktu eksekusi proses
 
 ## Refleksi Diri
 Tuliskan secara singkat:
-- Apa bagian yang paling menantang minggu ini?  langkah perhitungan dan waktu rata-rata.
+- Apa bagian yang paling menantang minggu ini?  langkah perhitungan di excel
 - Bagaimana cara Anda mengatasinya?  mencari dan memahami materi.
 
 ---
