@@ -1,20 +1,25 @@
 
-# Laporan Praktikum Minggu [X]
-Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
+# Laporan Praktikum Minggu [6]
+Topik: Penjadwalan CPU – Round Robin (RR) dan Priority Scheduling
 
 ---
 
 ## Identitas
-- **Nama**  : [Nama Mahasiswa]  
-- **NIM**   : [NIM Mahasiswa]  
-- **Kelas** : [Kelas]
+- **Nama**  : Nadya Pramudita
+- **NIM**   : 250202956
+- **Kelas** : 1IKRA
 
 ---
 
 ## Tujuan
 Tuliskan tujuan praktikum minggu ini.  
 Contoh:  
-> Mahasiswa mampu menjelaskan fungsi utama sistem operasi dan peran kernel serta system call.
+1. Menghitung *waiting time* dan *turnaround time* pada algoritma RR dan Priority.  
+2. Menyusun tabel hasil perhitungan dengan benar dan sistematis.  
+3. Membandingkan performa algoritma RR dan Priority.  
+4. Menjelaskan pengaruh *time quantum* dan prioritas terhadap keadilan eksekusi proses.  
+5. Menarik kesimpulan mengenai efisiensi dan keadilan kedua algoritma.  
+
 
 ---
 
