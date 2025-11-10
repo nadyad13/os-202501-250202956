@@ -1,5 +1,5 @@
 
-# Laporan Praktikum Minggu [X]
+# Laporan Praktikum Minggu [5]
 Topik: scheduling fcfs dan sjf
 
 ---
@@ -202,7 +202,20 @@ Rata rata FJS
 4. Simpan seluruh hasil dan analisis ke `laporan.md`.  
 
 **JAWABAN**
-1. FCFS (First Come First Served)
+
+1. 
+<img width="1009" height="480" alt="FCFS dan SJF_1" src="https://github.com/user-attachments/assets/8102c538-953c-4c40-90c2-ad06c9fc9fc0" />
+
+
+2. 
+
+| Algoritma | Avg Waiting Time | Avg Turnaround Time | Kelebihan | Kekurangan |
+|------------|------------------|----------------------|------------|-------------|
+| FCFS | 8,75 | 14,75 | Sederhana dan mudah diterapkan | Tidak efisien untuk proses panjang |
+| SJF | 8,5 | 14,5 | Optimal untuk job pendek | Menyebabkan *starvation* pada job panjang |
+   
+
+3. FCFS (First Come First Served)
 
 Kelebihan:
 
@@ -220,7 +233,7 @@ Kelemahan:
 
 - Tidak mempertimbangkan lama waktu eksekusi, sehingga bisa menurunkan throughput sistem.
 
-2. SJF (Shortest Job First)
+SJF (Shortest Job First)
 
 Kelebihan:
 
@@ -257,7 +270,7 @@ SJF sulit diterapkan karena sistem tidak selalu mengetahui waktu eksekusi proses
 
 ## Refleksi Diri
 Tuliskan secara singkat:
-- Apa bagian yang paling menantang minggu ini?  langkah perhitungan dan waktu rata-rata.
+- Apa bagian yang paling menantang minggu ini?  langkah perhitungan di excel
 - Bagaimana cara Anda mengatasinya?  mencari dan memahami materi.
 
 ---
