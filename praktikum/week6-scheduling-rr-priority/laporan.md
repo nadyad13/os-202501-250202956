@@ -93,6 +93,7 @@ Priority Scheduling
 
 ## Quiz
 1. Perbedaan utama antara Round Robin dan Priority Scheduling
+
    **Jawaban:** 
 
 - Round Robin (RR) menggunakan pembagian waktu yang sama untuk setiap proses. Setiap proses mendapat giliran menjalankan CPU selama waktu tertentu yang disebut time quantum, lalu digantikan oleh proses lain. Tujuannya agar semua proses diperlakukan adil dan sistem tetap responsif, terutama pada sistem interaktif.
@@ -100,6 +101,7 @@ Priority Scheduling
 - Priority Scheduling menentukan urutan eksekusi berdasarkan tingkat prioritas. Proses dengan prioritas tertinggi dijalankan terlebih dahulu. Sistem ini cocok jika ada proses yang harus diselesaikan lebih cepat daripada yang lain, tetapi bisa menimbulkan ketidakadilan bagi proses berprioritas rendah.
 
 2. Pengaruh besar/kecilnya time quantum terhadap performa sistem
+
    **Jawaban:**  
 
 Time quantum terlalu kecil
@@ -115,6 +117,7 @@ Time quantum terlalu besar
 - Waktu tunggu meningkat
 
 3. Mengapa algoritma Priority dapat menyebabkan starvation
+
    **Jawaban:**  
 
 Algoritma Priority dapat menyebabkan starvation karena proses dengan prioritas rendah terus tertunda, sementara proses prioritas tinggi selalu didahulukan, sehingga yang prioritas rendah mungkin tidak pernah dieksekusi.
