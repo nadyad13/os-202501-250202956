@@ -126,8 +126,8 @@ Algoritma Priority dapat menyebabkan starvation karena proses dengan prioritas r
 
 ## Refleksi Diri
 Tuliskan secara singkat:
-- Apa bagian yang paling menantang minggu ini?  
-- Bagaimana cara Anda mengatasinya?  
+- Apa bagian yang paling menantang minggu ini?  kurang memahami perbedaan rr dan priority
+- Bagaimana cara Anda mengatasinya?  bertanya pada teman yang sudah memahami tentang rr dan priority
 
 ---
 
