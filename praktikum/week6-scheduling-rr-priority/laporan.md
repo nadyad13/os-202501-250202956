@@ -118,6 +118,43 @@ Sertakan screenshot hasil percobaan atau diagram:
 
 ---
 
+## Analisis
+Perbandingan kinerja
+
+Dalam dataset ini Priority (non-preemptive) menghasilkan avg waiting dan avg turnaround terendah. Itu karena urutan eksekusi berdasarkan prioritas (angka prioritas kecil = dieksekusi lebih dulu), sehingga proses penting (dengan prioritas lebih tinggi) segera terselesaikan.
+
+Round Robin memberikan fairness tetapi rata-rata metrik lebih tinggi dibanding Priority pada contoh ini (karena RR membagi waktu merata tanpa memandang prioritas proses).
+
+Pengaruh ukuran time quantum pada RR
+
+Terlihat tren: q kecil → metrik rata-rata lebih besar, q besar → metrik rata-rata lebih kecil (dalam rentang q yang dicoba: 2 → 3 → 5).
+
+Penjelasan:
+
+Quantum kecil (q=2): banyak context switching → overhead teoretis lebih besar dan fragmentasi eksekusi → menambah waiting time keseluruhan.
+
+Quantum besar (q=5): lebih sedikit switching, setiap proses menyelesaikan lebih banyak pekerjaan tiap giliran → mirip FCFS untuk proses yang tiba awal, sehingga rata-rata waiting turun.
+
+Tapi peringatan: kalau quantum terlalu besar, RR kehilangan tujuan time-sharing (respon buruk terhadap proses interaktif) dan perilaku mendekati FCFS sehingga fairness terhadap proses singkat berkurang.
+
+Fairness vs Efisiensi
+
+RR: lebih adil (setiap proses mendapat giliran secara bergiliran), cocok sistem interaktif. Namun efisiensi (waktu tunggu rata-rata) bergantung kuat pada pemilihan q.
+
+Priority: efisien untuk proses penting, tetapi potensi starvation pada proses berprioritas rendah (terutama pada varian preemptive). Pada implementasi non-preemptive contoh ini tidak mengalami starvation tetapi menunggu lebih lama.
+
+Starvation & Mitigasi
+
+Priority scheduling dapat menyebabkan starvation. Solusi umum: aging — secara bertahap menaikkan prioritas proses yang menunggu lama sehingga pada akhirnya juga mendapat CPU.
+
+Catatan tentang dataset & generalisasi
+
+Hasil ini bergantung pada arrival times, burst times, dan nilai prioritas pada contoh. Untuk dataset lain urutan relatif dan nilai rata-rata bisa berbeda.
+
+Dalam praktek, pemilihan algoritma bergantung tujuan: throughput maksimum? latensi rendah untuk proses interaktif? fairness?
+
+---
+
 ## Kesimpulan
 Round Robin (RR)
 - Setiap proses mendapat giliran waktu yang sama (time quantum), sehingga sistem lebih adil dan responsif.
