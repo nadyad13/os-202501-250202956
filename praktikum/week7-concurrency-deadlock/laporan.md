@@ -294,8 +294,14 @@ Ekperimen 3
 ---
 
 ## Hasil Eksekusi
-Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/example.png)
+
+![Wekk7eksperimen1](https://github.com/user-attachments/assets/056bc8ff-ed70-47f0-971f-51b38f7d9782)
+
+![Week7simulasi1](https://github.com/user-attachments/assets/d552fdda-8de2-488c-9b5f-395f77cd0e0b)
+
+![Week7eksperimen2](https://github.com/user-attachments/assets/62921e18-f195-451b-a435-6255633162e0)
+
+![Week7simulasi2](https://github.com/user-attachments/assets/45ae2ed4-cf84-43d5-aae0-5a3c14e022d1)
 
 ---
 
