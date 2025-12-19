@@ -5,9 +5,9 @@ Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
 ---
 
 ## Identitas
-- **Nama**  : [Nama Mahasiswa]  
-- **NIM**   : [NIM Mahasiswa]  
-- **Kelas** : [Kelas]
+- **Nama**  : Nadya Pramudita
+- **NIM**   : 250202956
+- **Kelas** : 1IKRA
 
 ---
 
