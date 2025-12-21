@@ -1,6 +1,6 @@
 
 # Laporan Praktikum Minggu [9]
-Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
+Topik: simulasi scheduling 
 
 ---
 
@@ -87,8 +87,10 @@ Simulasi memungkinkan pengujian perilaku algoritma dalam berbagai skenario tanpa
 ---
 
 ## Hasil Eksekusi
-Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/example.png)
+<img width="1365" height="767" alt="Screenshot 2025-12-21 191751" src="https://github.com/user-attachments/assets/a463ad05-15c2-4aab-95c6-e2ec874a03c8" />
+
+<img width="1365" height="767" alt="Screenshot 2025-12-21 191939" src="https://github.com/user-attachments/assets/6e51169b-5217-4e37-a111-8613acb0f181" />
+
 
 ---s
 
