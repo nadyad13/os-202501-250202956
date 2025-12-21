@@ -1,0 +1,37 @@
+# Dataset
+processes = ["P1", "P2", "P3", "P4"]
+arrival_time = [3, 0, 2, 1]
+burst_time = [3, 6, 7, 8]
+
+n = len(processes)
+
+start_time = [0] * n
+finish_time = [0] * n
+waiting_time = [0] * n
+turnaround_time = [0] * n
+
+# FCFS Scheduling
+for i in range(n):
+    if i == 0:
+        start_time[i] = arrival_time[i]
+    else:
+        start_time[i] = max(finish_time[i - 1], arrival_time[i])
+
+    finish_time[i] = start_time[i] + burst_time[i]
+
+    waiting_time[i] = start_time[i] - arrival_time[i]
+    turnaround_time[i] = finish_time[i] - arrival_time[i]
+
+# Hitung rata-rata
+avg_waiting_time = sum(waiting_time) / n
+avg_turnaround_time = sum(turnaround_time) / n
+
+# Tampilkan hasil (tanpa \t)
+print("Proses  Arrival  Burst  Start  Finish  Waiting  Turnaround")
+for i in range(n):
+    print(f"{processes[i]}       {arrival_time[i]}        {burst_time[i]}      "
+          f"{start_time[i]}      {finish_time[i]}       "
+          f"{waiting_time[i]}        {turnaround_time[i]}")
+
+print("\nRata-rata Waiting Time     =", round(avg_waiting_time, 2))
+print("Rata-rata Turnaround Time =", round(avg_turnaround_time, 2))
