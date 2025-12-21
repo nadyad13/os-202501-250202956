@@ -226,7 +226,11 @@ Hanya menunjukkan hasil numerik, bukan kondisi real-time sebenarnya
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+1. Praktikum ini berhasil mengimplementasikan simulasi algoritma penjadwalan First Come First Served (FCFS) untuk menghitung waiting time dan turnaround time berdasarkan data arrival time dan burst time.
+
+2. Hasil simulasi menunjukkan kesesuaian dengan perhitungan manual, sehingga membuktikan bahwa program yang dibuat valid dan mampu merepresentasikan konsep penjadwalan CPU secara benar.
+
+3. Simulasi scheduling mempermudah analisis kinerja algoritma penjadwalan, terutama untuk jumlah proses yang besar, meskipun masih memiliki keterbatasan dalam merepresentasikan kondisi sistem operasi secara nyata.
 
 ---
 
@@ -236,9 +240,6 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 2. Jalankan program dengan dataset uji.  
 3. Sajikan output dalam tabel atau grafik.  
 4. Tulis laporan praktikum pada `laporan.md`.
-
-**Jawaban:**  
-
 
 
 ### Quiz
