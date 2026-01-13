@@ -1,3 +1,5 @@
+# LAPORAN PRAKTIKUM SISTEM OPERASI
+## Minggu 11 – Simulasi dan Deteksi Deadlock
 
 # Laporan Praktikum Minggu [11]
 Topik: deadlock detection
@@ -38,39 +40,48 @@ Deadlock detection bertujuan mendeteksi deadlock agar sistem dapat melakukan pem
 
 ---
 
-## Langkah Praktikum
-1. Langkah-langkah yang dilakukan.  
-2. Perintah yang dijalankan.  
-3. File dan kode yang dibuat.  
-4. Commit message yang digunakan.
+## C. Dataset Uji
+Dataset berisi informasi alokasi dan permintaan sumber daya oleh proses.
+
+| Proses | Alokasi | Permintaan |
+|------|--------|-----------|
+| P1 | R1 | R2 |
+| P2 | R2 | R3 |
+| P3 | R3 | R1 |
+| P4 | R4 | - |
 
 ---
 
-## Kode / Perintah
-Tuliskan potongan kode atau perintah utama:
-```bash
-uname -a
-lsmod | head
-dmesg | head
-```
+## Implementasi Program
+Program dibuat menggunakan bahasa Python dan berjalan di terminal.  
+Algoritma bekerja dengan membentuk relasi tunggu antar proses berdasarkan alokasi dan permintaan sumber daya untuk mendeteksi circular wait.
 
 ---
 
 ## Hasil Eksekusi
-Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/example.png)
+Berdasarkan hasil eksekusi program:
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/f6c287f4-f7f0-4770-8f78-54cb3742ed20" />
+
+
+| Proses | Status |
+|------|--------|
+| P1 | Deadlock |
+| P2 | Deadlock |
+| P3 | Deadlock |
+| P4 | Aman |
+
+Proses P1, P2, dan P3 mengalami deadlock karena membentuk siklus permintaan sumber daya, sedangkan P4 tidak terlibat karena tidak meminta sumber daya lain.
 
 ---
 
 ## Analisis
-- Jelaskan makna hasil percobaan.  
-- Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).  
-- Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
+Deadlock terjadi karena seluruh kondisi deadlock terpenuhi, khususnya circular wait.  
+Program berhasil mendeteksi proses-proses yang saling menunggu sumber daya secara melingkar.
 
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+Simulasi deteksi deadlock berhasil menunjukkan bahwa pendekatan deteksi diperlukan untuk sistem yang tidak menerapkan pencegahan atau penghindaran deadlock.
 
 ---
 
@@ -113,15 +124,37 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
    1. Membutuhkan overhead untuk proses deteksi
 
    2. Memerlukan mekanisme pemulihan yang dapat berdampak pada proses lain
+=======
+## Quiz
 
+1. Perbedaan deadlock prevention, avoidance, dan detection
+
+   Deadlock prevention mencegah deadlock dengan menghilangkan satu atau lebih syarat deadlock sejak awal.
+
+   Deadlock avoidance menghindari deadlock dengan mengatur alokasi sumber daya agar sistem selalu berada pada keadaan aman.
+
+   Deadlock detection membiarkan deadlock terjadi, lalu mendeteksinya dan melakukan pemulihan.
+   
+2. Alasan deteksi deadlock tetap diperlukan
+
+   Deteksi deadlock diperlukan karena pencegahan dan penghindaran deadlock sering membatasi kinerja sistem. Dengan deteksi, sistem dapat berjalan lebih fleksibel dan efisien meskipun berisiko deadlock.
+
+3. Kelebihan dan kekurangan deteksi deadlock
+
+- Kelebihan:
+
+   1. Pemanfaatan sumber daya lebih optimal
+
+   2. Lebih fleksibel untuk sistem kompleks
+
+- Kekurangan:
+
+   1. Membutuhkan overhead untuk proses deteksi
+
+   2. Memerlukan mekanisme pemulihan yang dapat berdampak pada proses lain
 ---
 
-## Refleksi Diri
-Tuliskan secara singkat:
-- Apa bagian yang paling menantang minggu ini?  
-- Bagaimana cara Anda mengatasinya?  
-
----
-
-**Credit:**  
-_Template laporan praktikum Sistem Operasi (SO-202501) – Universitas Putra Bangsa_
+## Referensi
+Silberschatz, A., Galvin, P., Gagne, G. *Operating System Concepts*.  
+Tanenbaum, A. *Modern Operating Systems*.  
+OSTEP – Deadlock Detection.
