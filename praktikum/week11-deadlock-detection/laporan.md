@@ -7,19 +7,30 @@
 
 ---
 
-## A. Tujuan Praktikum
-Praktikum ini bertujuan untuk memahami mekanisme deteksi deadlock dalam sistem operasi melalui simulasi program sederhana berbasis terminal serta menganalisis hasil deteksi secara logis dan sistematis.
+## Tujuan
+1. Membuat program sederhana untuk mendeteksi deadlock.  
+2. Menjalankan simulasi deteksi deadlock dengan dataset uji.  
+3. Menyajikan hasil analisis deadlock dalam bentuk tabel.  
+4. Memberikan interpretasi hasil uji secara logis dan sistematis.  
+5. Menyusun laporan praktikum sesuai format yang ditentukan.
 
 ---
 
-## B. Dasar Teori
-Deadlock adalah kondisi kebuntuan ketika dua atau lebih proses saling menunggu sumber daya yang sedang dipegang proses lain sehingga tidak ada proses yang dapat berjalan.
+## Dasar Teori
+1. Konsep Deadlock
+Deadlock adalah kondisi ketika beberapa proses saling menunggu sumber daya yang sedang digunakan proses lain sehingga sistem tidak dapat berjalan.
 
-Empat kondisi deadlock:
-1. Mutual Exclusion  
-2. Hold and Wait  
-3. No Preemption  
-4. Circular Wait  
+2. Syarat Terjadinya Deadlock
+Deadlock terjadi jika empat kondisi terpenuhi bersamaan, yaitu mutual exclusion, hold and wait, no preemption, dan circular wait.
+
+3. Resource Allocation Graph (RAG)
+RAG digunakan untuk memodelkan hubungan proses dan sumber daya, di mana siklus pada graf menunjukkan kemungkinan deadlock.
+
+4. Algoritma Deadlock Detection
+Algoritma ini memeriksa status alokasi dan permintaan sumber daya untuk menentukan apakah terdapat proses yang terjebak deadlock.
+
+5. Tujuan Deadlock Detection
+Deadlock detection bertujuan mendeteksi deadlock agar sistem dapat melakukan pemulihan dan mencegah berhentinya proses.
 
 ---
 
@@ -35,13 +46,13 @@ Dataset berisi informasi alokasi dan permintaan sumber daya oleh proses.
 
 ---
 
-## D. Implementasi Program
+## Implementasi Program
 Program dibuat menggunakan bahasa Python dan berjalan di terminal.  
 Algoritma bekerja dengan membentuk relasi tunggu antar proses berdasarkan alokasi dan permintaan sumber daya untuk mendeteksi circular wait.
 
 ---
 
-## E. Hasil Eksekusi
+## Hasil Eksekusi
 Berdasarkan hasil eksekusi program:
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/f6c287f4-f7f0-4770-8f78-54cb3742ed20" />
 
@@ -57,31 +68,44 @@ Proses P1, P2, dan P3 mengalami deadlock karena membentuk siklus permintaan sumb
 
 ---
 
-## F. Analisis
+## Analisis
 Deadlock terjadi karena seluruh kondisi deadlock terpenuhi, khususnya circular wait.  
 Program berhasil mendeteksi proses-proses yang saling menunggu sumber daya secara melingkar.
 
 ---
 
-## G. Kesimpulan
+## Kesimpulan
 Simulasi deteksi deadlock berhasil menunjukkan bahwa pendekatan deteksi diperlukan untuk sistem yang tidak menerapkan pencegahan atau penghindaran deadlock.
 
 ---
 
 ## Quiz
 
-### 1. Perbedaan pencegahan, penghindaran, dan deteksi deadlock
-- Pencegahan: mencegah salah satu kondisi deadlock terjadi.
-- Penghindaran: menghindari deadlock dengan analisis keadaan aman.
-- Deteksi: membiarkan deadlock terjadi lalu mendeteksinya.
+1. Perbedaan deadlock prevention, avoidance, dan detection
 
-### 2. Mengapa deteksi deadlock diperlukan?
-Karena tidak semua sistem dapat menerapkan pencegahan atau penghindaran akibat keterbatasan sumber daya dan fleksibilitas sistem.
+   Deadlock prevention mencegah deadlock dengan menghilangkan satu atau lebih syarat deadlock sejak awal.
 
-### 3. Kelebihan dan kekurangan deteksi deadlock
-**Kelebihan:** lebih fleksibel dan efisien penggunaan sumber daya.  
-**Kekurangan:** deadlock sudah terjadi sebelum ditangani.
+   Deadlock avoidance menghindari deadlock dengan mengatur alokasi sumber daya agar sistem selalu berada pada keadaan aman.
 
+   Deadlock detection membiarkan deadlock terjadi, lalu mendeteksinya dan melakukan pemulihan.
+   
+2. Alasan deteksi deadlock tetap diperlukan
+
+   Deteksi deadlock diperlukan karena pencegahan dan penghindaran deadlock sering membatasi kinerja sistem. Dengan deteksi, sistem dapat berjalan lebih fleksibel dan efisien meskipun berisiko deadlock.
+
+3. Kelebihan dan kekurangan deteksi deadlock
+
+- Kelebihan:
+
+   1. Pemanfaatan sumber daya lebih optimal
+
+   2. Lebih fleksibel untuk sistem kompleks
+
+- Kekurangan:
+
+   1. Membutuhkan overhead untuk proses deteksi
+
+   2. Memerlukan mekanisme pemulihan yang dapat berdampak pada proses lain
 ---
 
 ## Referensi
