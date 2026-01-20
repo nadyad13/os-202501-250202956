@@ -1,20 +1,22 @@
 
-# Laporan Praktikum Minggu [X]
+# Laporan Praktikum Minggu [13]
 Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
 
 ---
 
 ## Identitas
-- **Nama**  : [Nama Mahasiswa]  
-- **NIM**   : [NIM Mahasiswa]  
-- **Kelas** : [Kelas]
+- **Nama**  : Nadya Pramudita
+- **NIM**   : 250202956
+- **Kelas** : 1IKRA
 
 ---
 
 ## Tujuan
-Tuliskan tujuan praktikum minggu ini.  
-Contoh:  
-> Mahasiswa mampu menjelaskan fungsi utama sistem operasi dan peran kernel serta system call.
+1. Menulis Dockerfile sederhana untuk sebuah aplikasi/skrip.
+2. Membangun image dan menjalankan container.
+3. Menjalankan container dengan pembatasan **CPU** dan **memori**.
+4. Mengamati dan menjelaskan perbedaan eksekusi container dengan dan tanpa limit resource.
+5. Menyusun laporan praktikum secara runtut dan sistematis.
 
 ---
 
@@ -60,11 +62,10 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 ---
 
 ## Quiz
-1. [Pertanyaan 1]  
-   **Jawaban:**  
-2. [Pertanyaan 2]  
-   **Jawaban:**  
-3. [Pertanyaan 3]  
+1. Mengapa container perlu dibatasi CPU dan memori?
+2. Apa perbedaan VM dan container dalam konteks isolasi resource?
+3. Apa dampak limit memori terhadap aplikasi yang boros memori?
+
    **Jawaban:**  
 
 ---
