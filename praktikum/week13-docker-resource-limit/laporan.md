@@ -92,32 +92,119 @@ Resource limit membantu menjalankan banyak container secara bersamaan dengan leb
    ```
 
 ---
+## Hasil Eksekusi
+build 
+![hasil](<screenshots/build container.png>) Hasil Eksekusi
+tanpa limit
+![hasil](<screenshots/tanpa  limit.png>)
+dengan limit
+![hasil](<screenshots/tanpa  limit.png>)
+tanpa limit
+![hasil](<screenshots/monitoring sederhana.png>)
+
+---
 
 ## Kode / Perintah
-Tuliskan potongan kode atau perintah utama:
-```bash
-uname -a
-lsmod | head
-dmesg | head
+app.py
+```
+import time
+
+data = []
+
+print("=== UJI RESOURCE LIMIT DOCKER ===")
+
+try:
+    i = 0
+    while True:
+        i += 1
+
+        # Bebani CPU
+        x = i * i * i
+
+        # Alokasi memori bertahap (1 MB)
+        data.append("X" * 1024 * 1024)
+
+        print(f"Iterasi: {i} | Memori terpakai: {len(data)} MB")
+        time.sleep(0.1)
+
+except MemoryError:
+    print("ERROR: Memori tidak mencukupi!")
+
+except Exception as e:
+    print("Program dihentikan:", e)
+```
+dockerfile
+```
+FROM python:3.10-slim
+
+WORKDIR /app
+
+COPY app.py .
+
+CMD ["python", "app.py"]
+```
+membuat dockerfile build 
+```
+docker build -t week13-resource-limit .
+```
+menjalankan container tanpa limir
+``` 
+docker run --rm week13-resource-limit .
+```
+menjalankan container dengan limit
+```
+docker run --rm --cpus="0.5" --memory="256m" week13-resource-limit
 ```
 
----
 
-## Hasil Eksekusi
-Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/example.png)
 
 ---
+## Catatan Output
+tanpa limit
+```
+=== UJI RESOURCE LIMIT DOCKER ===
+Iterasi: 1 | Memori terpakai: 1 MB
+Iterasi: 2 | Memori terpakai: 2 MB
+Iterasi: 3 | Memori terpakai: 3 MB
+Iterasi: 4 | Memori terpakai: 4 MB
+Iterasi: 5 | Memori terpakai: 5 MB
+Iterasi: 6 | Memori terpakai: 6 MB
+Iterasi: 7 | Memori terpakai: 7 MB
+Iterasi: 8 | Memori terpakai: 8 MB
+Iterasi: 120 | Memori terpakai: 120 MB
+Iterasi: 121 | Memori terpakai: 121 MB
+```
+(Setiap iterasi menambah ±1 MB memori dan membebani CPU)
 
-## Analisis
-- Jelaskan makna hasil percobaan.  
-- Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).  
-- Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
+dengan limit
+
+
+
+```
+=== UJI RESOURCE LIMIT DOCKER ===
+Iterasi: 1 | Memori terpakai: 1 MB
+Iterasi: 2 | Memori terpakai: 2 MB
+Iterasi: 3 | Memori terpakai: 3 MB
+Iterasi: 4 | Memori terpakai: 4 MB
+Iterasi: 5 | Memori terpakai: 5 MB
+...
+Iterasi: 120 | Memori terpakai: 120 MB
+Iterasi: 256 | Memori terpakai: 256 MB
+```
+
+Setiap iterasi menambah ±1 MB memori.
+
+Saat mendekati 256 MB, container dihentikan secara paksa oleh Docker.
+
+Program tidak sempat menangkap MemoryError Python.
 
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+Berdasarkan praktikum yang telah dilakukan, dapat disimpulkan bahwa Docker menyediakan mekanisme pembatasan sumber daya CPU dan memori yang efektif melalui fitur resource limit. Container yang dijalankan tanpa batasan dapat menggunakan CPU dan memori secara bebas sesuai kapasitas sistem host. Sebaliknya, container yang dijalankan dengan limit CPU dan memori menunjukkan performa yang lebih terkendali, di mana penggunaan CPU menjadi lebih lambat dan container dihentikan secara otomatis ketika penggunaan memori melebihi batas yang ditentukan.
+
+Pembatasan resource ini sangat penting untuk menjaga stabilitas sistem, terutama ketika menjalankan banyak container secara bersamaan. Dengan adanya limit, Docker mampu mencegah satu container memonopoli sumber daya dan melindungi sistem host dari risiko kehabisan memori (Out of Memory).
+
 
 ---
 
