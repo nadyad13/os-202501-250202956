@@ -122,7 +122,7 @@ print("Simulasi selesai")
 ---
 
 ## Hasil (Results):
-![alt text](<Screenshot 2026-01-24 194719.png>)
+![alt text](deadlock.png)
 
 ---
 
